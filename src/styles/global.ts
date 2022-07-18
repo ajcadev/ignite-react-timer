@@ -4,6 +4,11 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
+:root {
+  --primary: ${props => props.theme.primary};
+  --secondary: ${props => props.theme.secondary};
+}
+
 * {
   margin: 0;
 }
@@ -15,6 +20,8 @@ html, body, #root {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background: var(--secondary);
+  color: var(--primary);
 }
 
 img, picture, video, canvas, svg {
